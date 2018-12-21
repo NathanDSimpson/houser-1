@@ -12,8 +12,8 @@ module.exports = {
     },
     addNewHouse: (req, res) => {
         const db = req.app.get('db')
-        let { name, address, city, state, zip, img, mortgage, rent } = req.body
-        db.add_new_house({ name, address, city, state, zip })
+        let { name, address, city, st, zip, img, mortgage, rent } = req.body
+        db.add_new_house({ name, address, city, st, zip, img, mortgage, rent })
             .then(response => {
                 res.status(200).send(response)
             })
@@ -24,10 +24,10 @@ module.exports = {
     },
     deleteHouse: (req, res) => {
         const db = req.app.get('db')
-        const {id} = req.params
-        db.delete_house({id})
+        const { id } = req.params
+        db.delete_house({ id })
             .then(response => {
                 res.status(200).send(response)
-            }) 
+            })
     }
 }

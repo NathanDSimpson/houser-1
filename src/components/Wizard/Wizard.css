@@ -4,6 +4,9 @@
     padding: 23px;
     position: relative;
     height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #wizard > h1 {
@@ -12,6 +15,21 @@
     font-family: 'Open Sans', sans-serif;
     color: #3b5249;
     display: inline-block;
+    margin-bottom: 30px;
+    align-self: flex-start;
+}
+
+input {
+    border: 1px solid #3B5249;
+    height: 25px;
+    padding: 1px;
+    margin: 3px 0 20px 0;
+}
+input:focus{
+    outline: 0px;
+}
+button:focus {
+    outline: 0px;
 }
 
 #cancel-button {
@@ -27,6 +45,20 @@
     border: 0;
 }
 
+#next-button {
+    display: inline-block;
+    position: absolute;
+    right: 23px;
+    bottom: 23px;
+    border-radius: 0;
+    padding: 8px;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+    background-color: #3B5249;
+    border: 0;
+}
+
 #complete-button {
     display: inline-block;
     position: absolute;
@@ -38,4 +70,53 @@
     font-weight: 500;
     background-color: #8aea92;
     border: 0;
+}
+
+/* STEP 1 PAGE */
+
+#step-one, #step-two, #step-three {
+    width: 675px;
+    padding: 0;
+}
+
+#step-one h3, #step-two h3, #step-three h3 {
+    color: #3B5249;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+}
+#step-one > div {
+    display: flex;
+}
+#step-one > div > div {
+    margin-right: 15px;
+}
+
+#property-name, #city {
+    width: 130px;
+}
+
+#address {
+    width: 670px;
+}
+
+#state {
+    width: 70px;
+    display: inline-block;
+}
+
+#city, #zipcode {
+    display: inline-block;
+}
+
+#step-two > input, #step-three > input {
+    width: 670px;
+}
+
+#step-three > h4 {
+    font-size: .9em;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
 }

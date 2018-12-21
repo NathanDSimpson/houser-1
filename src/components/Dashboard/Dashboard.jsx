@@ -20,8 +20,18 @@ export default class Dashboard extends Component {
                 this.setState({
                     houses: res.data
                 })
-                console.log(this.state)
             })
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevState.houses.length !== this.state.houses.length) {
+            axios.get('/api/houses')
+            .then(res => {
+                this.setState({
+                    houses: res.data
+                })
+            })
+        }
     }
 
     deleteHouse(id) {
@@ -35,13 +45,13 @@ export default class Dashboard extends Component {
         return (
             <div id="dashboard">
                 <h1>Dashboard</h1>
-                <Link to='/wizard'><button id="add-button">Add New Property</button></Link>
+                <Link to='/wizard/step1'><button id="add-button">Add New Property</button></Link>
                 <hr></hr>
                 <h3>Home Listings</h3>
                 {this.state.houses.map(house => (
-                    <House 
-                        key={house.id} 
-                        info={house} 
+                    <House
+                        key={house.id}
+                        info={house}
                         deleteFn={this.deleteHouse}
                     />
                 ))}
