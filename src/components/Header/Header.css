@@ -1,0 +1,17 @@
+#header{
+    background-color: #519872;
+    padding: 20px 20px 20px 300px;
+    max-height: 75px;
+    height: 10vh;
+}
+#header > h4 {
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    font-size: 2em;
+    display: inline-block;
+}
+#header > img {
+    display: inline-block;
+    margin-right: 10px;
+}

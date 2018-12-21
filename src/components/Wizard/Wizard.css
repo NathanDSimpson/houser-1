@@ -1,0 +1,41 @@
+#wizard {
+    background-color: #E5F4EC;
+    width: 960px;
+    padding: 23px;
+    position: relative;
+    height: 90vh;
+}
+
+#wizard > h1 {
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    color: #3b5249;
+    display: inline-block;
+}
+
+#cancel-button {
+    display: inline-block;
+    position: absolute;
+    right: 23px;
+    top: 23px;
+    border-radius: 0;
+    padding: 8px;
+    font-size: 1em;
+    font-weight: bolder;
+    background-color: #fec2c2;
+    border: 0;
+}
+
+#complete-button {
+    display: inline-block;
+    position: absolute;
+    right: 23px;
+    bottom: 23px;
+    border-radius: 0;
+    padding: 8px;
+    font-size: 1.2em;
+    font-weight: 500;
+    background-color: #8aea92;
+    border: 0;
+}
